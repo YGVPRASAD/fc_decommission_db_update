@@ -29,11 +29,12 @@ LOGGER.setLevel(logging.getLevelName(LOGLEVEL))
 PARSER = argparse.ArgumentParser(description="This Module decomission the target account")
 
 PARSER.add_argument("-a", "--action", help='stack actions(delete,update)', required=True)
-PARSER.add_argument("-r", "--region", type=str, required=True)
+#PARSER.add_argument("-r", "--region", type=str, required=True)
 
 ARGS = PARSER.parse_args()
 
-StackRegion = ARGS.region
+#StackRegion = ARGS.region
+StackRegion = environ['RegionName']
 AccountName = environ['AccountName']
 num = environ['num']
 
